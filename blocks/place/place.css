@@ -1,0 +1,8 @@
+.place{
+    border-radius: 10px;
+    background-color: white;
+    max-width: 282px;
+    height: 361px;
+    display: flex;
+    flex-direction:column;
+    }

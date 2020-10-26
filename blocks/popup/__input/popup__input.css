@@ -1,0 +1,23 @@
+.popup__input{
+max-width: 358px;
+height: 27,26px;
+margin-top: 30px;
+outline: none;
+border: 0;
+box-sizing: border-box;
+border-bottom: 1px solid #bcbcc4;
+}
+.popup__input_type_name{
+font-family:'Inter';
+font-size: 14px;
+line-height: 17px;
+padding-bottom: 13px;
+color: black;
+}
+.popup__input_type_title{
+font-family:'Inter';
+font-size: 14px;
+line-height: 17px;
+padding-bottom: 13px;
+color: black;
+}
