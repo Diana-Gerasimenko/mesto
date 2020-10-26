@@ -10,6 +10,7 @@ transition: 0.5s ease;
 cursor: pointer;
 margin-left: 17px;
 align-self: center;
+padding: 0;
 }
 .profile__edit-button:hover{
 opacity: 0.8;
