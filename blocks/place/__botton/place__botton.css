@@ -1,5 +1,5 @@
 .place__botton{
-    background-image: url('../../../../images/button-heart.png');
+    background-image: url('../../../images/button-heart.png');
     cursor: pointer;
     background-size: cover;
     background-repeat: no-repeat;

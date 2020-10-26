@@ -11,80 +11,82 @@
 <body class='page'>
     <div class='page__container'>
         <header class="header">
-            <img class='header__logo' src='/images/logo.png'>;
+            <img class='header__logo' src='./images/Mesto_Russia.png' alt='логотип'>;
             <div class='header__line'></div>
         </header>
-            <main class='content'>
-                <section class="profile">
-                    <img class='profile__avatar' src='./images/image.jpg' alt=''>
-                    <div class ='profile__info'>
-                        <h1 class="profile__title"> Жак-Ив Кусто</h1>
-                        <botton class='profile__edit-button'></botton>
-                        <h2 class="profile__subtitle">Исследователь океана</h2>
-                    </div>
-                <botton class ='profile__add-button'></botton>
-                </section>
-                <section class='places'>
+        <main class='content'>
+            <section class="profile">
+                <img class='profile__avatar' src='./images/avatar__photo.jpg' alt='жак-ив кусто'>
+                <div class='profile__info'>
+                    <h1 class="profile__title"> Жак-Ив Кусто</h1>
+                    <botton class='profile__edit-button'></botton>
+                    <h2 class="profile__subtitle">Исследователь океана</h2>
+                </div>
+                <botton class='profile__add-button'></botton>
+            </section>
+            <section class='places'>
                 <div class='place'>
-                    <img class='place__image' src='./images/sulak canyon.jpg'>
+                    <img class='place__image' src='./images/sulak canyon.jpg' alt='каньон'>
                     <div class='place__navigation'>
-                    <p class='place__text'>Махачкала</p>
-                    <botton class='place__botton'></botton>
+                        <p class='place__text'>Махачкала</p>
+                        <botton class='place__botton'></botton>
                     </div>
                 </div>
                 <div class='place'>
-                    <img class='place__image' src='./images/forest.jpg'>
+                    <img class='place__image' src='./images/forest.jpg' alt='лес'>
                     <div class='place__navigation'>
-                    <p class='place__text'>Леса Коми</p>
-                    <botton class='place__botton'></botton>
+                        <p class='place__text'>Леса Коми</p>
+                        <botton class='place__botton'></botton>
                     </div>
                 </div>
                 <div class='place'>
-                    <img class='place__image' src='./images/mountain-in-the-night.jpg'>
+                    <img class='place__image' src='./images/mountain-in-the-night.jpg' alt='горы'>
                     <div class='place__navigation'>
-                    <p class='place__text'>Кызыл-Таш</p>
-                    <botton class='place__botton'></botton>
+                        <p class='place__text'>Кызыл-Таш</p>
+                        <botton class='place__botton'></botton>
                     </div>
                 </div>
                 <div class='place'>
-                    <img class='place__image' src='./images/lake Ladoga.jpg'>
+                    <img class='place__image' src='./images/lake Ladoga.jpg' alt='палатка'>
                     <div class='place__navigation'>
-                    <p class='place__text'>Карелия</p>
-                    <botton class='place__botton'></botton>
+                        <p class='place__text'>Карелия</p>
+                        <botton class='place__botton'></botton>
                     </div>
                 </div>
                 <div class='place'>
-                    <img class='place__image' src='./images/abkhazian.jpg'>
+                    <img class='place__image' src='./images/abkhazian.jpg' alt='озеро'>
                     <div class='place__navigation'>
-                    <p class='place__text'>Абхазия</p>
-                    <botton class='place__botton'></botton>
+                        <p class='place__text'>Абхазия</p>
+                        <botton class='place__botton'></botton>
                     </div>
                 </div>
                 <div class='place'>
-                    <img class='place__image' src='./images/Altai-stone.jpg'>
+                    <img class='place__image' src='./images/Altai-stone.jpg' alt='камень'>
                     <div class='place__navigation'>
-                    <p class='place__text'>Алтай</p>
-                    <botton class='place__botton'></botton>
+                        <p class='place__text'>Алтай</p>
+                        <botton class='place__botton'></botton>
                     </div>
                 </div>
-                </section>
-            </main>
-            <footer class='footer'>
+            </section>
+        </main>
+        <footer class='footer'>
             <p class='footer__copyright'>© 2020 Mesto Russia</p>
-            </footer>
-            <div class="popup">
-                <div class="popup__content">
-                  <button type="button" class="popup__close"></button>
-                  <h3 class="popup__title">Редактировать профиль</h3>
-                  <form class="popup__form">
+        </footer>
+        <div class="popup">
+            <div class="popup__content">
+                <button type="button" class="popup__close"></button>
+                <h3 class="popup__title">Редактировать профиль</h3>
+                <form class="popup__form">
                     <input type="text" class="popup__input popup__input_type_name" value='Жак-Ив Кусто'>
                     <input type="text" class="popup__input popup__input_type_title" value='Исследователь океана'>
-                    <button type="submit" class='popup__submit'><p class='popup__submit_text'>Сохранить</p></button>
-                  </form>
-                </div>
-              </div>
+                    <button type="submit" class='popup__submit'>
+                        <p class='popup__submit_text'>Сохранить</p>
+                    </button>
+                </form>
+            </div>
         </div>
-        <script src="scripts/script.js"></script>
+    </div>
+    <script src="scripts/script.js"></script>
 </body>
 
 </html>

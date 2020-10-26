@@ -6,23 +6,24 @@
     border-radius: 10px;
     position: relative;
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
     padding: 36px;
   }
   
   @media screen and (max-width: 767px) {
     .popup__content {
-      width: 100%;
-      max-width: none;
-      height: 100%;
-      margin-top: 73px;
+      max-width:282px;
+      min-height:322px;
+      margin-top: 123px;
+      padding: 22px;
+      padding-bottom: 0;
     }
   }
-  
   
   .popup_opened:before {
     color: #fff;
     font-size: 40px;
-    content: 'X';
     display: block;
     width: 30px;
     height: 40px;

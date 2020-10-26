@@ -4,9 +4,16 @@
     font-size: 18px;
     line-height: 22px;
     text-align: center;
-    color: #e7e7e7;
+    color: #fff;
     z-index: 3;
     display: flex;
     align-items: center;
     margin: 0 auto;
     }
+
+    @media screen and (max-width: 767px) {
+        .popup__submit_text{
+        font-size: 14px;
+        line-height: 17px;
+        }
+      }
