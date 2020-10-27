@@ -11,7 +11,7 @@
 <body class='page'>
     <div class='page__container'>
         <header class="header">
-            <img class='header__logo' src='./images/Mesto_Russia.png' alt='логотип'>;
+            <img class='header__logo' src='./images/header__logo.svg' alt='логотип'>;
             <div class='header__line'></div>
         </header>
         <main class='content'>
@@ -19,52 +19,52 @@
                 <img class='profile__avatar' src='./images/avatar__photo.jpg' alt='жак-ив кусто'>
                 <div class='profile__info'>
                     <h1 class="profile__title"> Жак-Ив Кусто</h1>
-                    <botton class='profile__edit-button'></botton>
+                    <button class='profile__edit-button' type='button'></button>
                     <h2 class="profile__subtitle">Исследователь океана</h2>
                 </div>
-                <botton class='profile__add-button'></botton>
+                <button class='profile__add-button' type='button'></button>
             </section>
             <section class='places'>
                 <div class='place'>
-                    <img class='place__image' src='./images/sulak canyon.jpg' alt='каньон'>
+                    <img class='place__image' src='./images/sulak_canyon.jpg' alt='каньон'>
                     <div class='place__navigation'>
-                        <p class='place__text'>Махачкала</p>
-                        <botton class='place__botton'></botton>
+                        <p class='place__text'>Сулакский каньон</p>
+                        <button class='place__button' type='button'></button>
                     </div>
                 </div>
                 <div class='place'>
                     <img class='place__image' src='./images/forest.jpg' alt='лес'>
                     <div class='place__navigation'>
                         <p class='place__text'>Леса Коми</p>
-                        <botton class='place__botton'></botton>
+                        <button class='place__button' type='button'></button>
                     </div>
                 </div>
                 <div class='place'>
                     <img class='place__image' src='./images/mountain-in-the-night.jpg' alt='горы'>
                     <div class='place__navigation'>
                         <p class='place__text'>Кызыл-Таш</p>
-                        <botton class='place__botton'></botton>
+                        <button class='place__button' type='button'></button>
                     </div>
                 </div>
                 <div class='place'>
-                    <img class='place__image' src='./images/lake Ladoga.jpg' alt='палатка'>
+                    <img class='place__image' src='./images/lake_Ladoga.jpg' alt='палатка'>
                     <div class='place__navigation'>
                         <p class='place__text'>Карелия</p>
-                        <botton class='place__botton'></botton>
+                        <button class='place__button' type='button'></button>
                     </div>
                 </div>
                 <div class='place'>
                     <img class='place__image' src='./images/abkhazian.jpg' alt='озеро'>
                     <div class='place__navigation'>
                         <p class='place__text'>Абхазия</p>
-                        <botton class='place__botton'></botton>
+                        <button class='place__button' type='button'></button>
                     </div>
                 </div>
                 <div class='place'>
                     <img class='place__image' src='./images/Altai-stone.jpg' alt='камень'>
                     <div class='place__navigation'>
                         <p class='place__text'>Алтай</p>
-                        <botton class='place__botton'></botton>
+                        <button class='place__button' type='button'></button>
                     </div>
                 </div>
             </section>
@@ -76,9 +76,9 @@
             <div class="popup__content">
                 <button type="button" class="popup__close"></button>
                 <h3 class="popup__title">Редактировать профиль</h3>
-                <form class="popup__form">
-                    <input type="text" class="popup__input popup__input_type_name" value='Жак-Ив Кусто'>
-                    <input type="text" class="popup__input popup__input_type_title" value='Исследователь океана'>
+                <form class="popup__form" name='information'>
+                    <input type="text" class="popup__input popup__input_type_name" value='Жак-Ив Кусто' name='name'>
+                    <input type="text" class="popup__input popup__input_type_title" value='Исследователь океана' name='title'>
                     <button type="submit" class='popup__submit'>Сохранить</button>
                 </form>
             </div>

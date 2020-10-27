@@ -7,7 +7,6 @@ grid-template-columns: 1fr 5fr 1fr;
 justify-content: center;
 align-items: center;
 }
-
 @media screen and (max-width: 1023px) {
 .profile{
 max-width: 720px;

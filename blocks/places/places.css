@@ -1,17 +1,21 @@
 .places{
     margin: 0 auto;
-    width: calc(100% - 2*198px);
+    width: calc(100% - 2*199px);
     display: grid;
     grid-template-columns: repeat(auto-fit, 282px);
     gap: 21px 18px;
     margin-top: 51px;
     justify-content: center;
     }  
-@media screen and (max-width:1023px){
-.places{
-max-width: 720px;
-}
-}
+    
+    @media screen and (max-width:1023px){
+    .places{
+    width: calc(100% - 2*20px);
+    gap:21px;
+    margin-top: 40px;
+    }
+    }
+
     @media screen and (max-width:767px){
     .places{
     width: calc(100% - 2*19px);

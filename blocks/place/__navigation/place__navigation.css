@@ -1,7 +1,11 @@
 .place__navigation{
     display: flex;
     flex-direction: row;
-    max-width: 246px;
+    justify-content: space-between;
     margin-top: 25px;
+    max-width: 246px;
+    padding-left: 21px;
+    padding-right: 15px;
+    margin-bottom: 31px;
     }
     

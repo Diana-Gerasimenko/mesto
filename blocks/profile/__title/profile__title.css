@@ -9,6 +9,13 @@ margin: 0;
 text-rendering: optimizeLegibility;
 }
 
+@media screen and (max-width:1279px){
+    .profile__title{
+    max-width: 320px;
+    font-size: 38px;
+    line-height: 50px;
+    }
+    } 
 @media screen and (max-width:1023px){
     .profile__title{
     max-width: 230px;
@@ -21,7 +28,7 @@ text-rendering: optimizeLegibility;
 
 @media screen and (max-width:767px){
 .profile__title{
-max-width: 189px;
+width: 100%;
 font-size: 27px;
 line-height: 33px;
 text-align: center;

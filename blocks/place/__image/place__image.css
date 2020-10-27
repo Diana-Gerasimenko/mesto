@@ -1,6 +1,7 @@
 .place__image{
     object-fit: cover;
-    border-radius: 10px;
     max-width: 282px;
     height: 282px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
     }

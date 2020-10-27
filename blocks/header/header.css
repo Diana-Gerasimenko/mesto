@@ -3,11 +3,6 @@ margin: 0 auto;
 width: calc(100% - 2 * 199px);
 margin-top: 45px;
 }
-@media screen and (max-width: 1023px) {
-.profile{
-max-width: 720px;
-}
-}
 @media screen and (max-width:767px){
 .header{
 width: 100%;

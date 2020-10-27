@@ -1,13 +1,15 @@
-.place__botton{
-    background-image: url('../../../images/button-heart.png');
+.place__button{
+    background-image: url('../../../images/button_heart.svg');
+    color: black;
     cursor: pointer;
     background-size: cover;
     background-repeat: no-repeat;
     transition: 0.5s ease;
     width:20.76px;
     height:18.13px;
+    border: none;
     }
-    .place__botton:hover{
+    .place__button:hover{
     opacity: 0.8;
     }
    
