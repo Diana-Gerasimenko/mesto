@@ -1,9 +1,7 @@
 .profile__edit-button{
 width: 24px;
 height: 24px;
-background:transparent url('../../../images/button_profile.svg') no-repeat;
-object-fit: contain;
-background-size: contain;
+background:transparent url('../../../images/edit__button.svg') center no-repeat;
 border: 1px solid white;
 margin: 0;
 transition: 0.5s ease;
