@@ -9,7 +9,6 @@ margin: 0;
 border-radius: 2px;
 box-sizing: border-box;
 border: 1px solid white;
-padding: 0;
 }
 .profile__add-button:hover{
 opacity: 0.6;
@@ -17,7 +16,7 @@ opacity: 0.6;
 
 @media screen and (max-width:1023px){
     .profile__add-button{
-    background-image: url('../../../images/Add_Button_for_phone.svg');
+    background: transparent url('../../../images/Add_Button_for_phone.svg') no-repeat;
     margin-top: 40px;
     width: 320px;
     justify-content: center;
@@ -25,9 +24,9 @@ opacity: 0.6;
     } 
 
 
-@media screen and (max-width:767px){
-.profile__add-button{
-margin-top: 36px;
-width: 282px;
-}
-}
+  @media screen and (max-width:767px){
+  .profile__add-button{
+    margin-top: 36px;
+    width: 282px;
+   }
+   }
