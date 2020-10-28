@@ -12,8 +12,8 @@ const titleField = document.querySelector('.popup__input_type_title');
 function showPopup() {
   popup.classList.add('popup_opened');
   popup.removeEventListener('click', showPopup);
-  title.value = nameField.textContent;
-  subTitle.value = titleField.textContent;
+  nameField.value = title.textContent;
+  titleField.value = subTitle.textContent;
 }
 function closePopup() {
   popup.classList.remove('popup_opened')
