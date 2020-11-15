@@ -24,48 +24,6 @@
                 <button class='profile__add-button' type='button'></button>
             </section>
             <section class='places'>
-                <div class='place'>
-                    <img class='place__image' src='./images/sulak_canyon.jpg' alt='каньон'>
-                    <div class='place__navigation'>
-                        <p class='place__text'>Сулакский каньон</p>
-                        <button class='place__button' type='button'></button>
-                    </div>
-                </div>
-                <div class='place'>
-                    <img class='place__image' src='./images/forest.jpg' alt='лес'>
-                    <div class='place__navigation'>
-                        <p class='place__text'>Леса Коми</p>
-                        <button class='place__button' type='button'></button>
-                    </div>
-                </div>
-                <div class='place'>
-                    <img class='place__image' src='./images/mountain-in-the-night.jpg' alt='горы'>
-                    <div class='place__navigation'>
-                        <p class='place__text'>Кызыл-Таш</p>
-                        <button class='place__button' type='button'></button>
-                    </div>
-                </div>
-                <div class='place'>
-                    <img class='place__image' src='./images/lake_Ladoga.jpg' alt='палатка'>
-                    <div class='place__navigation'>
-                        <p class='place__text'>Карелия</p>
-                        <button class='place__button' type='button'></button>
-                    </div>
-                </div>
-                <div class='place'>
-                    <img class='place__image' src='./images/abkhazian.jpg' alt='озеро'>
-                    <div class='place__navigation'>
-                        <p class='place__text'>Абхазия</p>
-                        <button class='place__button' type='button'></button>
-                    </div>
-                </div>
-                <div class='place'>
-                    <img class='place__image' src='./images/Altai-stone.jpg' alt='камень'>
-                    <div class='place__navigation'>
-                        <p class='place__text'>Алтай</p>
-                        <button class='place__button' type='button'></button>
-                    </div>
-                </div>
             </section>
         </main>
         <footer class='footer'>
@@ -77,12 +35,42 @@
                 <h3 class="popup__title">Редактировать профиль</h3>
                 <form class="popup__form" name='information'>
                     <input type="text" class="popup__input popup__input_type_name" value='Жак-Ив Кусто' name='name'>
-                    <input type="text" class="popup__input popup__input_type_title" value='Исследователь океана' name='title'>
+                    <input type="text" class="popup__input popup__input_type_title" value='Исследователь океана'
+                        name='title'>
                     <button type="submit" class='popup__submit'>Сохранить</button>
                 </form>
             </div>
         </div>
+         
+        <div class="popup-cards">
+            <div class="popup__content popup-cards__content">
+                <button type="button" class="popup-cards__close"></button>
+                <h3 class="popup-cards__title">Новое место</h3>
+                <form class="popup-cards__form" name='information'>
+                    <input type="text" class="popup-cards__input popup__input_type_text" name ='name' placeholder="Название"> 
+                    <input type="text" class="popup-cards__input popup__input_type_link" name ='link' placeholder="Ссылка на картинку">
+                    <button type="submit" class='popup__submit'>Создать</button>
+                </form>
+            </div>
+        </div>
+        <div class ='popup popup-photo'>
+            <div class ='popup-photo__content'>
+                <button type="button" class="popup-photo__close"></button>
+                <img class='popup-photo__image place__image' src='#' alt=''>
+                <h3 class='popup-photo__text'></h3>
+            </div>
+        </div>
     </div>
+    <template id='place-template'>
+        <article class='place'>
+            <img class='place__image' src='#' alt=''>
+            <button class='place__button-delete' type='button'></button>
+            <div class='place__navigation'>
+                <p class='place__text'></p>
+                <button class='place__button' type='button'></button>
+                </div>
+        </article>
+    </template>
     <script src="scripts/script.js"></script>
 </body>
 

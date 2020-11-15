@@ -1,0 +1,27 @@
+.popup-photo__close{
+ width: 40px;
+ height: 40px;
+ background: transparent url('../../../images/close_button.svg') center no-repeat;
+ border: none;
+ position: absolute;
+ top: -40px;
+ right: -40px;
+ padding: 0;
+ margin: 0;
+ cursor: pointer;
+ }
+ .popup-photo__close:hover {
+opacity: 0.6;
+ }
+ @media screen and (max-width: 767px) {
+.popup-photo__close{
+  right: 0;
+}
+}
+ @media screen and (max-width: 767px) {
+ .popup-photo__close{
+ background: transparent url('../../../images/close_button_for_phone.svg') center no-repeat;
+ width: 26px;
+ height: 26px;
+ }
+}

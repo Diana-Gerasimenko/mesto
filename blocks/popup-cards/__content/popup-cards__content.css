@@ -1,4 +1,4 @@
-.popup__content {
+.popup-cards__content{
     max-width: 430px;
     width: 100%;
     background-color: #fff;
@@ -9,8 +9,9 @@
     padding: 0;
     padding: 36px;
   }
+  
   @media screen and (max-width: 767px) {
-    .popup__content {
+    .popup-cards__content {
       max-width:282px;
       margin-top: 123px;
       padding: 22px;
@@ -18,7 +19,7 @@
     }
   }
   
-  .popup_opened:before {
+  .popup-cards__content:before {
     color: #fff;
     font-size: 40px;
     display: block;
