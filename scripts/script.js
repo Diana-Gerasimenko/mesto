@@ -112,7 +112,7 @@ initialCards.forEach(createPlaceItem)
 // Выбираем переменные для добавления карточки
 const addButton = document.querySelector('.profile__add-button')
 const popupCards = document.querySelector('.popup-cards');
-const cardSubmit = document.querySelector('.popup__submit');
+const cardSubmit = document.querySelector('.popup-cards__submit');
 const CloseButton = document.querySelector('.popup-cards__close');
 const deleteNewCard = document.querySelector('.place__button-delete')
 const cardForm = document.querySelector('.popup-cards__form')
@@ -131,8 +131,8 @@ function showPopupCards() {
 
 
 // Добавляем карточку в контейнер через форму
-const textField=popupCards.querySelector('.popup__input_type_text')
-const linkField=popupCards.querySelector('.popup__input_type_link')
+const textField=popupCards.querySelector('.popup-cards__input_type_text')
+const linkField=popupCards.querySelector('.popup-cards__input_type_link')
 
 function createForm(event) {
   event.preventDefault();
