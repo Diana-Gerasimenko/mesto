@@ -96,7 +96,6 @@ placeElement.querySelector('.place__button-delete').addEventListener('click',fun
 placeElement.querySelector('.place__button').addEventListener('click',function(evt){
   evt.target.classList.toggle('place__button_active');
 })
-
 return placeElement;
 };
 const renderPlaceItem = (item, container) => {
@@ -122,8 +121,6 @@ const cardForm = document.querySelector('.popup-cards__form')
 function showPopupCards() {
   popupCards.classList.add('popup-cards_opened');
   popupCards.removeEventListener('click', showPopupCards);
-  link.src=''
-  name.textContent=''
   }
   function closePopupCards() {
   popupCards.classList.remove('popup-cards_opened')
@@ -139,9 +136,10 @@ const linkField=popupCards.querySelector('.popup__input_type_link')
 
 function createForm(event) {
   event.preventDefault();
-  linkField.src=document.querySelector('.place__image').value
-  textField.textContent=document.querySelector('.place__text').value
+  createPlaceItem(linkField,textField)
   addCard(cardsContainer, createPlaceItem(textField,linkField))
+  document.querySelector('.place__image').src=linkField.value
+  document.querySelector('.place__text').textContent=textField.value
   closePopupCards();
   cardForm.reset()
   }
