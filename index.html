@@ -41,23 +41,25 @@
                 </form>
             </div>
         </div>
-         
-        <div class="popup-cards">
-            <div class="popup-cards__content">
-                <button type="button" class="popup-cards__close"></button>
-                <h3 class="popup-cards__title">Новое место</h3>
-                <form class="popup-cards__form" name='information'>
-                    <input type="text" class="popup-cards__input popup-cards__input_type_text" name ='name' placeholder="Название"> 
-                    <input type="text" class="popup-cards__input popup-cards__input_type_link" name ='link' placeholder="Ссылка на картинку">
-                    <button type="submit" class='popup-cards__submit'>Создать</button>
+
+        <div class="popup popup_type_cards">
+            <div class="popup__content popup__content_cards">
+                <button type="button" class="popup__close popup__close_cards"></button>
+                <h3 class="popup__title popup__title_cards">Новое место</h3>
+                <form class="popup__form popup__form_cards" name='information'>
+                    <input type="text" class="popup__input popup__input_cards popup__input_type_text-cards" name='name'
+                        placeholder="Название">
+                    <input type="text" class="popup__input popup__input_cards popup__input_type_link-cards" name='link'
+                        placeholder="Ссылка на картинку">
+                    <button type="submit" class='popup__submit popup__submit_cards'>Создать</button>
                 </form>
             </div>
         </div>
-        <div class ='popup popup-photo'>
-            <div class ='popup-photo__content'>
-                <button type="button" class="popup-photo__close"></button>
-                <img class='popup-photo__image' src='#' alt=''>
-                <h3 class='popup-photo__text'></h3>
+        <div class='popup popup_type_image'>
+            <div class='popup__content_image'>
+                <button type="button" class="popup__close popup__close_image"></button>
+                <img class='popup__image' src='#' alt=''>
+                <h3 class='popup__caption'></h3>
             </div>
         </div>
     </div>
@@ -68,7 +70,7 @@
             <div class='place__navigation'>
                 <p class='place__text'></p>
                 <button class='place__button' type='button'></button>
-                </div>
+            </div>
         </article>
     </template>
     <script src="scripts/script.js"></script>
