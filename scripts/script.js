@@ -151,7 +151,6 @@ function closePopup(element) {
 function openPopup(element) {
   element.classList.add("popup_opened");
 }
-
 function closePhoto() {
   closePopup(popupImage);
 }
