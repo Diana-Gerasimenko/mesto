@@ -1,31 +1,30 @@
 // Создаем форму для редактирования профиля
-const popupInfo = document.querySelector('.popup');
-const popupCloseButton = document.querySelector('.popup__close');
+const popupInfo = document.querySelector('.popup_type_info');
+const popupCloseButton = document.querySelector('.popup__close_info');
 const editButton = document.querySelector('.profile__edit-button');
 const title = document.querySelector('.profile__title');
 const subTitle = document.querySelector('.profile__subtitle');
-const formInfo = document.querySelector('.popup__form');
+const formInfo = document.querySelector('.popup__form_info');
 const nameField = document.querySelector('.popup__input_type_name');
 const titleField = document.querySelector('.popup__input_type_title');
 
   function showPopup() {
-    popupInfo.classList.add('popup__opened');
-    popupInfo.removeEventListener('click', showPopup);
+    openPopup(popupInfo)
     nameField.value = title.textContent;
     titleField.value = subTitle.textContent;
   }
-  function closePopup() {
-    popupInfo.classList.remove('popup__opened')
+  function closeInfoPopup() {
+    closePopup(popupInfo)
   }
   
   editButton.addEventListener('click', showPopup);
-  popupCloseButton.addEventListener('click', closePopup);
+  popupCloseButton.addEventListener('click', closeInfoPopup);
   
   function submitForm(event) {
     event.preventDefault();
     title.textContent = nameField.value;
     subTitle.textContent = titleField.value;
-    closePopup();
+    closePopup(popupInfo);
   }
   formInfo.addEventListener('submit', submitForm);
 
@@ -69,15 +68,14 @@ const createPlaceItem = (item) => {
   link.style.backgroundImage = `url(${item.link})`;
 // Открываем фото
 placeElement.querySelector('.place__image').addEventListener('click',function(){
-  popupImage.classList.toggle('popup__opened');
-  popupImage.querySelector('.popup__image').src=item.link;
-  popupImage.querySelector('.popup__image').alt.textContent=item.name;
-  popupImage.querySelector('.popup__caption').textContent=item.name;
+  openPopup(popupImage)
+  bigPhoto.src=item.link;
+  bigPhoto.alt=item.name;
+  captionPhoto.textContent=item.name;
   }) 
   function closePhoto() {
-    popupImage.classList.remove('popup__opened')
+    closePopup(popupImage)
   }
-  photoButton.addEventListener('click', closePhoto); 
 
 //Удаляем карточку
 placeElement.querySelector('.place__button-delete').addEventListener('click',function(evt){
@@ -87,10 +85,12 @@ placeElement.querySelector('.place__button-delete').addEventListener('click',fun
 placeElement.querySelector('.place__button').addEventListener('click',function(evt){
   evt.target.classList.toggle('place__button_active');
 })
+photoButton.addEventListener('click', closePhoto); 
 return placeElement;
 };
-
 const popupImage = document.querySelector('.popup_type_image');
+const bigPhoto=document.querySelector('.popup__image');
+const captionPhoto=document.querySelector('.popup__caption');
 const photoButton = document.querySelector('.popup__close_image'); 
 
 
@@ -108,16 +108,15 @@ function addCard(cardsContainer,placeElement){
 // Выбираем переменные для добавления карточки
 const addButton = document.querySelector('.profile__add-button')
 const popupCards = document.querySelector('.popup_type_cards');
-const cardSubmit = document.querySelector('.popup__submit_cards');
 const closeButton = document.querySelector('.popup__close_cards');
 const cardForm = document.querySelector('.popup__form_cards')
 
 //Создаем форму для добавления новой карточки 
 function showPopupCards() {
-  popupCards.classList.add('popup__opened');
+  openPopup(popupCards)
   }
   function closePopupCards() {
-  popupCards.classList.remove('popup__opened')
+  closePopup(popupCards)
   }
   
   addButton.addEventListener('click', showPopupCards);
@@ -125,8 +124,6 @@ function showPopupCards() {
 
 
 // Добавляем карточку в контейнер через форму
-const link =document.querySelector('.place__image')
-const name=document.querySelector('.place__text')
 const textField=document.querySelector('.popup__input_type_text-cards')
 const linkField=document.querySelector('.popup__input_type_link-cards')
 
@@ -141,3 +138,10 @@ function createForm(event) {
 addCard(cardsContainer, newPlaceElement)
 }
 cardForm.addEventListener('submit', createForm);
+
+function closePopup(element){
+  element.classList.remove('popup_opened');
+}
+function openPopup(element){
+  element.classList.add('popup_opened');
+}
