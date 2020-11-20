@@ -73,7 +73,7 @@ const createPlaceItem = (item) => {
   const link = placeElement.querySelector(".place__image");
   const name = placeElement.querySelector(".place__text");
   name.textContent = item.name;
-  link.style.backgroundImage = `url(${item.link})`;
+  link.src=item.link;
   // Открываем фото
   placeElement
     .querySelector(".place__image")

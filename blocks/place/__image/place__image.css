@@ -1,6 +1,5 @@
 .place__image{
     background-size: cover;
-    object-fit: cover;
     max-width: 282px;
     height: 282px;
     border-top-right-radius: 10px;
