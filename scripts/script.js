@@ -145,13 +145,37 @@ function createForm(event) {
 }
 cardForm.addEventListener("submit", createForm);
 
-function closePopup(element) {
-  element.classList.remove("popup_opened");
-}
 function openPopup(element) {
   element.classList.add("popup_opened");
+}
+
+function closePopup(element) {
+  element.classList.remove("popup_opened");
 }
 function closePhoto() {
   closePopup(popupImage);
 }
 photoButton.addEventListener("click", closePhoto);
+
+//Функция закрытия модального окна кликом на overlay
+const overlay = function(evt){
+  if(evt.target == this){
+    closePopup(popupImage)
+    closePopup(popupInfo);
+    closePopup(popupCards);
+  }
+}
+popupImage.addEventListener('click',overlay)
+popupInfo.addEventListener('click',overlay)
+popupCards.addEventListener('click',overlay)
+
+// Close popup by escape
+
+document.addEventListener('keydown', function(event) {
+  const key = event.key; 
+  if (key === "Escape") {
+    closePopup(popupImage)
+    closePopup(popupInfo);
+    closePopup(popupCards);
+  }
+});
