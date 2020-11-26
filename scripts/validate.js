@@ -1,4 +1,4 @@
-const validationList={
+const validationParams={
     formSelector: '.popup__form',
     inputSelector: '.popup__input',
     submitButtonSelector: '.popup__submit',
@@ -62,4 +62,4 @@ function enableValidation(config) {
     });
 }
 
-enableValidation(validationList);
+enableValidation(validationParams);

@@ -8,7 +8,7 @@ const formInfo = document.querySelector(".popup__form_info");
 const nameField = document.querySelector(".popup__input_type_name");
 const titleField = document.querySelector(".popup__input_type_title");
 
-function showPopup() {
+function openInfoPopup() {
   openPopup(popupInfo);
   nameField.value = title.textContent;
   titleField.value = subTitle.textContent;
@@ -17,7 +17,7 @@ function closeInfoPopup() {
   closePopup(popupInfo);
 }
 
-editButton.addEventListener("click", showPopup);
+editButton.addEventListener("click", openInfoPopup);
 popupCloseButton.addEventListener("click", closeInfoPopup);
 
 function submitForm(event) {
@@ -70,14 +70,13 @@ const placeTemplate = document
 
 const createPlaceItem = (item) => {
   const placeElement = placeTemplate.cloneNode(true);
-  const link = placeElement.querySelector(".place__image");
+  const cardImage = placeElement.querySelector(".place__image");
   const name = placeElement.querySelector(".place__text");
   name.textContent = item.name;
-  link.src=item.link;
+  cardImage.src=item.link;
+  cardImage.alt=item.name;
   // Открываем фото
-  placeElement
-    .querySelector(".place__image")
-    .addEventListener("click", function () {
+  cardImage.addEventListener("click", function () {
       openPopup(popupImage);
       bigPhoto.src = item.link;
       bigPhoto.alt = item.name;
@@ -102,13 +101,13 @@ const bigPhoto = document.querySelector(".popup__image");
 const captionPhoto = document.querySelector(".popup__caption");
 const photoButton = document.querySelector(".popup__close_image");
 
-const renderPlaceItem = (item, container) => {
+const appendItem = (item, container) => {
   container.append(createPlaceItem(item));
 };
-initialCards.forEach((item) => renderPlaceItem(item, cardsContainer));
+initialCards.forEach((item) => appendItem(item, cardsContainer));
 
 //Добавляем новую карточку в контейнер
-function addCard(cardsContainer, placeElement) {
+function prependItem(cardsContainer, placeElement) {
   cardsContainer.prepend(placeElement);
 }
 
@@ -133,7 +132,7 @@ closeButton.addEventListener("click", closePopupCards);
 const textField = document.querySelector(".popup__input_type_text-cards");
 const linkField = document.querySelector(".popup__input_type_link-cards");
 
-function createForm(event) {
+function handleCreateCard(event) {
   event.preventDefault();
   const newPlaceElement = createPlaceItem({
     link: linkField.value,
@@ -141,16 +140,18 @@ function createForm(event) {
   });
   closePopupCards();
   cardForm.reset();
-  addCard(cardsContainer, newPlaceElement);
+  prependItem(cardsContainer, newPlaceElement);
 }
-cardForm.addEventListener("submit", createForm);
+cardForm.addEventListener("submit", handleCreateCard);
 
 function openPopup(element) {
   element.classList.add("popup_opened");
+  document.addEventListener('keydown', closeByEscape);
 }
 
 function closePopup(element) {
   element.classList.remove("popup_opened");
+  document.removeEventListener('keydown', closeByEscape);
 }
 function closePhoto() {
   closePopup(popupImage);
@@ -158,24 +159,20 @@ function closePhoto() {
 photoButton.addEventListener("click", closePhoto);
 
 //Функция закрытия модального окна кликом на overlay
-const overlay = function(evt){
-  if(evt.target == this){
-    closePopup(popupImage)
-    closePopup(popupInfo);
-    closePopup(popupCards);
-  }
+const handleOverlayClick = function(evt){
+    if(evt.target == this){
+      closePopup(evt.target)
+    }
 }
-popupImage.addEventListener('click',overlay)
-popupInfo.addEventListener('click',overlay)
-popupCards.addEventListener('click',overlay)
+popupImage.addEventListener('click',handleOverlayClick)
+popupInfo.addEventListener('click',handleOverlayClick)
+popupCards.addEventListener('click',handleOverlayClick)
 
-// Close popup by escape
-
-document.addEventListener('keydown', function(event) {
+// Закрыть popup нажатием на escape
+function closeByEscape(event) {
   const key = event.key; 
   if (key === "Escape") {
-    closePopup(popupImage)
-    closePopup(popupInfo);
-    closePopup(popupCards);
+    const openedPopup = document.querySelector('.popup_opened')
+    closePopup(openedPopup)
   }
-});
+}
